@@ -1,8 +1,68 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* theme color  */
+:root {
+  --bg-dark: #121212;
+  --bg-light-dark: #1E1E1E;
+  --text-light: #E0E0E0;
+  --accent: #FFFFFF;
+  --card-bg: #2A2A2A;
 }
 
-a {
-  color: #00B7FF;
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* header*/
+header {
+  background-color: var(--bg-light-dark);
+  padding: 20px;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/*layout centered*/
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* preview possible projects*/
+.projects {
+  background-color: var(--bg-light-dark);
+  padding: 50px 0;
+}
+
+.project-card {
+  background: var(--card-bg);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+
+.project-card:hover {
+  background: #333333;
+}
+
+/* footer */
+footer {
+  background-color: var(--bg-light-dark);
+  padding: 20px;
+  font-size: 14px;
 }
