@@ -228,3 +228,15 @@ footer {
 .contact-form button {
   cursor: pointer;
 }
+
+#typing-text {
+  font-weight: bold;
+  color: var(--accent);
+  border-right: 3px solid var(--accent); 
+  padding-right: 5px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
