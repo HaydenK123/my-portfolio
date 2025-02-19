@@ -229,19 +229,11 @@ footer {
   cursor: pointer;
 }
 
-#typing-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--accent);
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid var(--accent);
-  padding-right: 5px;
-  animation: blink 0.8s infinite;
+.cursor {
   display: inline-block;
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
