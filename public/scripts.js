@@ -2,30 +2,25 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typing-text");
-    const words = ["a Web Developer", "a Designer", "a Problem Solver", "a Creator"];
-    let wordIndex = 0;
-    let letterIndex = 0;
-    let currentWord = "";
+    const sentence = "A passionate Web Developer & Designer dedicated to building modern, user-friendly experiences.";
+    let index = 0;
     let isDeleting = false;
 
     function typeEffect() {
-        currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            textElement.textContent = currentWord.substring(0, letterIndex--);
+        if (!isDeleting) {
+            textElement.textContent = sentence.substring(0, index++);
         } else {
-            textElement.textContent = currentWord.substring(0, letterIndex++);
+            textElement.textContent = sentence.substring(0, index--);
         }
 
-        let typingSpeed = isDeleting ? 100 : 150;
+        let typingSpeed = isDeleting ? 50 : 100; //typing speedd
 
-        if (!isDeleting && letterIndex === currentWord.length) {
-            typingSpeed = 1000; // pausing before deleting
+        if (index === sentence.length) {
+            typingSpeed = 2000; 
             isDeleting = true;
-        } else if (isDeleting && letterIndex === 0) {
+        } else if (index === 0) {
+            typingSpeed = 1000;
             isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 500;
         }
 
         setTimeout(typeEffect, typingSpeed);
