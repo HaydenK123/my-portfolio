@@ -201,3 +201,30 @@ footer {
 .nav-links a:hover {
   color: var(--accent);
 }
+
+.contact-form {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: var(--bg-light-dark);
+  color: var(--text-light);
+}
+
+.contact-form button {
+  cursor: pointer;
+}

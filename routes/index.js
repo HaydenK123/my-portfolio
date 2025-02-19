@@ -17,8 +17,12 @@ router.get('/projects', (req, res) => {
 });
 
 // Contact Page
-router.get('/contact', (req, res) => {
-    res.render('contact');
+router.post('/send-message', (req, res) => {
+    const { name, email, message } = req.body;
+    console.log(`New message from ${name} (${email}): ${message}`);
+
+    res.send('Message sent! (Not actually sending yet, just logging.)');
 });
+
 
 module.exports = router;
