@@ -239,6 +239,7 @@ footer {
   border-right: 3px solid var(--accent);
   padding-right: 5px;
   animation: blink 0.8s infinite;
+  display: inline-block;
 }
 
 @keyframes blink {

@@ -7,17 +7,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let isDeleting = false;
 
     function typeEffect() {
-        if (!isDeleting) {
+        if (!isDeleting && index <= sentence.length) {
             textElement.textContent = sentence.substring(0, index++);
-        } else {
+        } else if (isDeleting && index >= 0) {
             textElement.textContent = sentence.substring(0, index--);
         }
 
-        let speed = isDeleting ? 50 : 100; // typing speed
+        let speed = isDeleting ? 50 : 100;
 
         if (index === sentence.length) {
-            setTimeout(() => (isDeleting = true), 1000);
-        } else if (index === 0) {
+            setTimeout(() => (isDeleting = true), 2000);
+        } else if (index === 0 && isDeleting) {
             isDeleting = false;
         }
 
@@ -26,3 +26,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeEffect();
 });
+
