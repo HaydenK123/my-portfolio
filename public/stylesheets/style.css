@@ -20,6 +20,10 @@ body {
 header {
   background-color: var(--bg-light-dark);
   padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav a {
@@ -36,10 +40,12 @@ nav a:hover {
 
 /*layout centered*/
 .container {
-  max-width: 900px;
-  margin: 50px auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
+
 
 /* preview possible projects*/
 .projects {
@@ -121,21 +127,19 @@ footer {
 
 /* social icons */
 .social-icons {
-  position: absolute;
-  top: 20px;
-  right: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-.social-icons a {
-  color: var(--text-light);
-  font-size: 24px;
-  margin: 0 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
+.social-icons img {
+  width: 30px;
+  transition: transform 0.3s ease;
 }
 
-.social-icons a:hover {
+.social-icons a:hover img {
   transform: scale(1.2);
-  color: var(--accent);
 }
 
 /* nav bubbles*/
@@ -171,4 +175,29 @@ footer {
 .social-icons a:hover img {
   transform: scale(1.2);
   opacity: 0.8;
+}
+
+/* center nav */
+.nav-links {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
 }
